@@ -103,5 +103,9 @@ letter-spacing: 0.5px;
   font-weight: bolder;
   color:red;
 }
+.overview{
+  position: absolute;
+}
+
 /* 
 OVERVIEW STYLING */
