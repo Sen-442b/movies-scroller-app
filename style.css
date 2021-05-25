@@ -103,9 +103,15 @@ letter-spacing: 0.5px;
   font-weight: bolder;
   color:red;
 }
-.overview{
-  position: absolute;
-}
 
+.overview:hover{
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: var(--primary-color);
+  color: white;
+   box-shadow: 2px , 3px , 2px green ;
+  
+}
 /* 
 OVERVIEW STYLING */
