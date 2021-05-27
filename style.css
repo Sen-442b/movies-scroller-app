@@ -50,7 +50,7 @@ header {
 
 main {
  
-  display: flex; /*not working*/
+   /*not working*/
   /* flex-wrap: wrap;
   justify-content: center; */
 
