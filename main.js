@@ -19,7 +19,7 @@ function getPopularMovies(url) {
     .then((data) => {
     
       displayMovies(data.results);
-      console.log(data.results)
+      
     });
 }
 getPopularMovies(API_URL);
