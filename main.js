@@ -2,8 +2,8 @@
 const API_KEY = "api_key=8033488aac94f6595663fe9fc6ac54fb";
 const WEB_BASE_URL = "https://api.themoviedb.org/3";
 const API_URL =
-  WEB_BASE_URL + "/discover/movie?sort_by=popularity.desc&" + API_KEY;
-  const IMG_URL = 'https://image.tmdb.org/t/p/w500'
+  WEB_BASE_URL + "/discover/movie?sort_by=popularity.desc&" + API_KEY; //recyclerview api
+  const IMG_URL = 'https://image.tmdb.org/t/p/w500' // for displaying poster images with their relative path 
 const SEARCH_URL  = WEB_BASE_URL + "/search/movie?" + API_KEY + "&language=en-US&page=1&include_adult=false"
   // const query  = WEB_BASE_URL + "search/movie" + API_KEY + "&query=";
 const main  = document.getElementById('main')
