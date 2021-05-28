@@ -34,7 +34,7 @@ function displayMovies(data) {
     const movieDiv = document.createElement('div');
     movieDiv.classList.add ='movie' //adding movie class in each element
     movieDiv.innerHTML = `
-    <img src="${IMG_URL+ poster_path }" alt="${title}" />
+    <img class ="movie-img" src="${IMG_URL+ poster_path }" alt="${title}" />
     <div class="movie-info">
         <h3>${title}</h3>
         <span class="${rateColor(vote_average)}">${vote_average}</span>
@@ -72,6 +72,9 @@ const searchText = searchBar.value;
 if(searchText){
 getPopularMovies(SEARCH_URL+ "&query=" +searchText);
 
+
+}else{
+  getPopularMovies(API_URL)
 }
 
  })
