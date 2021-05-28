@@ -66,7 +66,7 @@ align-items: center;
 }
 .movie-img {
   
-max-width: 350px;
+max-width: 30%;
   margin: 1rem; /*to be checked*/
   border-radius: 50%/10%;
   box-shadow: 0.2px 4px  5px rgba(11,156,49, 1);
