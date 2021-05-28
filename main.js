@@ -4,9 +4,12 @@ const WEB_BASE_URL = "https://api.themoviedb.org/3";
 const API_URL =
   WEB_BASE_URL + "/discover/movie?sort_by=popularity.desc&" + API_KEY;
   const IMG_URL = 'https://image.tmdb.org/t/p/w500'
-const searchBar = document.getElementById('search-bar').textContent
-  const query  = WEB_BASE_URL + "search/movie" + API_KEY + "&query=";
+const SEARCH_URL  = WEB_BASE_URL + "/search/movie?" + API_KEY + "&language=en-US&page=1&include_adult=false"
+  // const query  = WEB_BASE_URL + "search/movie" + API_KEY + "&query=";
 const main  = document.getElementById('main')
+const form = document.getElementById('form')
+const searchBar = document.getElementById('search-bar')
+
 
 
 //nested function for fetching data and then calling display function
@@ -16,6 +19,7 @@ function getPopularMovies(url) {
     .then((data) => {
     
       displayMovies(data.results);
+      console.log(data.results)
     });
 }
 getPopularMovies(API_URL);
@@ -25,7 +29,7 @@ getPopularMovies(API_URL);
 function displayMovies(data) {
     main.innerHTML='' //to clear the default main element display
   data.forEach((movie) => {
-      const {title, poster_path, vote_average,overview,adult}=movie //destructuring objects
+      const {title, poster_path, vote_average,overview,}=movie //destructuring objects
      
     const movieDiv = document.createElement('div');
     movieDiv.classList.add ='movie' //adding movie class in each element
@@ -61,10 +65,13 @@ function rateColor(rating){
 }
 
  
-//function for search command
- searchBar.document.addEventListener("click",()=>{
-     console.log(searchBar)
- })
+ //  , search bar functionality 
+ form.addEventListener("submit",(event)=>{
+   event.preventDefault();
+const searchText = searchBar.value;
+if(searchText){
+getPopularMovies(SEARCH_URL+ "&query=" +searchText);
 
- 
- // to check , search bar functionality 
+}
+
+ })
