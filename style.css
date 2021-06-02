@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 * {
   box-sizing: border-box;
   
@@ -11,7 +13,7 @@
 
 body {
   margin: 0;
-  font-family: monospace;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
  
 
   background-color: var(--dark-color);
@@ -27,6 +29,12 @@ header {
   display: flex;
   justify-content: flex-end;
  
+}
+h1{
+  display: block;
+  text-align: center;
+  background-color: var(--primary-color);
+ margin: 0;
 }
 .search-bar {
   background-color: transparent;
@@ -51,33 +59,47 @@ header {
 main {
  
    /*not working*/
-  /* flex-wrap: wrap;
-  justify-content: center; */
+  flex-wrap: wrap;
+  justify-content: center;
 
 
 }
 .movie {
   margin: 0;
-max-width: 300px;
+max-width: 350px;
 margin: 1px;
 box-shadow: 0.2px 4px 5px rgba(123, 177, 144, 0);
 align-items: center;
 
 }
 .movie-img {
-  
-max-width: 30%;
-  margin: 1rem; /*to be checked*/
-  border-radius: 50%/10%;
-  box-shadow: 0.2px 4px  5px rgba(11,156,49, 1);
 
+  
+  margin: 2rem;
+  border-radius: 30%/10%;
+  box-shadow: 2px 6px 20px rgb(11 156 49);
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  max-height:600px ;
 }
 
 .movie-info{
+  margin: 1rem;
   color: white;
 padding: 3px;
-align-items: center;
+
 letter-spacing: 0.5px;
+text-align: center;
+
+}
+.overview{
+  margin: 20px;
+  text-align:center;
+
+  cursor: pointer;
 }
 
 .movie-info h3{
@@ -105,12 +127,14 @@ letter-spacing: 0.5px;
 }
 
 .overview:hover{
-  cursor: pointer;
+  
+ 
   border: 2px solid white;
-  border-radius: 10px;
+  border-radius: 6px;
   background-color: var(--primary-color);
-  color: white;
-   box-shadow: 2px , 3px , 2px green ;
+  color: whitesmoke;
+   box-shadow: 2px , 3px , 7px green ;
+
   
 }
 /* 
